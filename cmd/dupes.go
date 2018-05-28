@@ -47,6 +47,8 @@ var dupesCmd = &cobra.Command{
 				return nil
 			}
 
+			fmt.Printf("Processing file %s\n", p)
+
 			f, err := os.Open(p)
 			if err != nil {
 				return errors.WithStack(err)
